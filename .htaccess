@@ -1,0 +1,4 @@
+# Bloquea el acceso directo a archivos sensibles (Apache / XAMPP)
+<FilesMatch "^\.(env|git)">
+    Require all denied
+</FilesMatch>

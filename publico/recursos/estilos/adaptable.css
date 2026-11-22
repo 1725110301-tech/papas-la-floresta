@@ -1,0 +1,71 @@
+/* =====================================================================
+   Diseño adaptable: de teléfono (base) a tableta y computadora
+   ===================================================================== */
+
+/* ---- Tableta pequeña (640px+) ---- */
+@media (min-width: 640px) {
+    .logo__lema { display: block; }
+    .hero__botones { flex-direction: row; flex-wrap: wrap; }
+    .ticket-lista { grid-template-columns: repeat(2, 1fr); }
+    .pasos__accion .boton { width: auto; }
+    .pie__legal .contenedor { flex-direction: row; justify-content: space-between; }
+}
+
+/* ---- Computadora (900px+) ---- */
+@media (min-width: 900px) {
+    :root { --alto-encabezado: 80px; }
+
+    body { padding-bottom: 0; }
+    .nav-movil { display: none; }
+
+    .nav-principal { display: flex; align-items: center; gap: .4rem; }
+    .nav-principal a {
+        padding: .45rem .9rem; border: 2px solid transparent;
+        color: var(--hueso); font-family: var(--fuente-titulo); font-size: .85rem; text-transform: uppercase; letter-spacing: .05em;
+        transition: background-color .15s, color .15s;
+    }
+    .nav-principal a:hover { background: var(--naranja); }
+    .nav-principal a.activo {
+        background: var(--amarillo); color: var(--negro); border-color: var(--negro); box-shadow: 2px 2px 0 var(--hueso);
+    }
+
+    .logo__nombre { font-size: 1.7rem; }
+    .solo-movil { display: none; }
+    .solo-escritorio { display: inline; }
+
+    .hero { padding: 3.5rem 0 4.5rem; }
+    .hero__rejilla { grid-template-columns: 7fr 5fr; gap: 2.5rem; }
+    .hero__titulo { font-size: clamp(2.8rem, 5.4vw, 3.9rem); }
+
+    .seccion { padding: 4.5rem 0; }
+    .seccion__cabecera { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    .seccion__cabecera--centrada { flex-direction: column; align-items: center; justify-content: center; }
+    .ticket-lista { grid-template-columns: repeat(3, 1fr); }
+    .pasos { grid-template-columns: repeat(3, 1fr); }
+
+    .banner-horario__interior { flex-direction: row; align-items: center; justify-content: space-between; }
+    .pie__rejilla { grid-template-columns: 1.3fr 1fr 1fr; gap: 3rem; }
+
+    .whatsapp-flotante { right: 2rem; bottom: 2rem; width: 4rem; height: 4rem; }
+    .whatsapp-flotante .material-symbols-outlined { font-size: 34px; }
+}
+
+/* ---- Pantallas grandes (1200px+) ---- */
+@media (min-width: 1200px) {
+    .hero__titulo { font-size: 4.1rem; }
+    .hero::after { font-size: 16rem; }
+}
+
+/* ---- Teléfonos muy angostos ---- */
+@media (max-width: 380px) {
+    .contenedor { padding: 0 1rem; }
+    .sticker-redondo { width: 6rem; height: 6rem; font-size: .62rem; right: 0; }
+    .ticket__pie { flex-wrap: wrap; }
+}
+
+/* ---- Respetar a quien prefiere menos movimiento ---- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+    .js .revelar { opacity: 1; transform: none; }
+}

@@ -1,0 +1,13 @@
+# Credenciales
+.env
+
+# Imágenes subidas desde el panel (se guardan aparte en producción)
+publico/recursos/imagenes/productos/*
+!publico/recursos/imagenes/productos/.gitkeep
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

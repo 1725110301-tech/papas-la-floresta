@@ -14,8 +14,6 @@ function rutasPublicas(): array
         'contacto'  => ['titulo' => 'Contacto y pedidos',   'vista' => 'contacto.php'],
     ];
 }
-
-/** Devuelve la ruta pedida si existe; si no, una página 404. */
 function resolverPagina(?string $clave): array
 {
     $rutas = rutasPublicas();
@@ -28,7 +26,6 @@ function resolverPagina(?string $clave): array
     return ['clave' => $clave] + $rutas[$clave];
 }
 
-/** Ruta del archivo de la vista, o null si todavía está vacío (en construcción). */
 function rutaVista(?string $archivo): ?string
 {
     if ($archivo === null) {

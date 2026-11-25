@@ -4,7 +4,6 @@ $precioDesde = $datos['precioDesde'] ?? null;
 $hayPortada  = archivoPublicoExiste('recursos/imagenes/portada.jpg');
 ?>
 
-<!-- ===================== HERO ===================== -->
 <section class="hero">
     <div class="contenedor hero__rejilla">
 
@@ -38,7 +37,6 @@ $hayPortada  = archivoPublicoExiste('recursos/imagenes/portada.jpg');
             <ul class="hero__chips">
                 <li>Hechas al momento</li>
                 <li>Salsas de la casa</li>
-                <li>Sal, limón y chile al gusto</li>
             </ul>
         </div>
 
@@ -53,20 +51,20 @@ $hayPortada  = archivoPublicoExiste('recursos/imagenes/portada.jpg');
                     <?php if ($hayPortada): ?>
                         <img src="recursos/imagenes/portada.jpg" alt="Papas a la francesa doradas en cono de papel">
                     <?php else: ?>
-                        <!-- Ilustración propia (se reemplaza sola cuando subas imagenes/portada.jpg) -->
+
                         <svg class="ilustracion" viewBox="0 0 400 440" role="img" aria-label="Cono de papel lleno de papas a la francesa doradas">
                             <g class="ilustracion__papas">
-                                <rect x="86"  y="96" width="34" height="140" rx="7" transform="rotate(-24 103 236)"/>
-                                <rect x="112" y="46" width="34" height="190" rx="7" transform="rotate(-14 129 236)"/>
-                                <rect x="150" y="22" width="34" height="214" rx="7" transform="rotate(-6 167 236)"/>
-                                <rect x="190" y="10" width="34" height="226" rx="7" transform="rotate(2 207 236)"/>
-                                <rect x="230" y="30" width="34" height="206" rx="7" transform="rotate(10 247 236)"/>
-                                <rect x="268" y="62" width="34" height="174" rx="7" transform="rotate(19 285 236)"/>
-                                <rect x="296" y="110" width="30" height="126" rx="7" transform="rotate(28 311 236)"/>
+                                <rect x="86" y="96" width="34" height="140" rx="7" transform="rotate(-24 103 236)" />
+                                <rect x="112" y="46" width="34" height="190" rx="7" transform="rotate(-14 129 236)" />
+                                <rect x="150" y="22" width="34" height="214" rx="7" transform="rotate(-6 167 236)" />
+                                <rect x="190" y="10" width="34" height="226" rx="7" transform="rotate(2 207 236)" />
+                                <rect x="230" y="30" width="34" height="206" rx="7" transform="rotate(10 247 236)" />
+                                <rect x="268" y="62" width="34" height="174" rx="7" transform="rotate(19 285 236)" />
+                                <rect x="296" y="110" width="30" height="126" rx="7" transform="rotate(28 311 236)" />
                             </g>
-                            <path class="ilustracion__cono" d="M66 224 H334 L276 418 Q200 436 124 418 Z"/>
-                            <path class="ilustracion__rayas" d="M112 224 L150 424 M168 224 L182 430 M232 224 L218 430 M288 224 L250 424"/>
-                            <rect class="ilustracion__etiqueta" x="128" y="276" width="144" height="62" rx="4" transform="rotate(-3 200 307)"/>
+                            <path class="ilustracion__cono" d="M66 224 H334 L276 418 Q200 436 124 418 Z" />
+                            <path class="ilustracion__rayas" d="M112 224 L150 424 M168 224 L182 430 M232 224 L218 430 M288 224 L250 424" />
+                            <rect class="ilustracion__etiqueta" x="128" y="276" width="144" height="62" rx="4" transform="rotate(-3 200 307)" />
                             <text class="ilustracion__texto" x="200" y="316" text-anchor="middle" transform="rotate(-3 200 307)">LA FLORESTA</text>
                         </svg>
                     <?php endif; ?>
@@ -94,7 +92,6 @@ $hayPortada  = archivoPublicoExiste('recursos/imagenes/portada.jpg');
     </div>
 </section>
 
-<!-- ===================== CINTA ===================== -->
 <div class="cinta" aria-hidden="true">
     <div class="cinta__barra">
         <div class="cinta__pista">
@@ -108,7 +105,6 @@ $hayPortada  = archivoPublicoExiste('recursos/imagenes/portada.jpg');
     </div>
 </div>
 
-<!-- ===================== LO MÁS PEDIDO ===================== -->
 <section class="seccion seccion--productos">
     <div class="contenedor">
         <div class="seccion__cabecera revelar">
@@ -179,7 +175,7 @@ $hayPortada  = archivoPublicoExiste('recursos/imagenes/portada.jpg');
     </div>
 </section>
 
-<!-- ===================== ASÍ PIDES ===================== -->
+
 <section class="seccion seccion--pasos">
     <div class="contenedor">
         <div class="seccion__cabecera seccion__cabecera--centrada revelar">
@@ -217,7 +213,6 @@ $hayPortada  = archivoPublicoExiste('recursos/imagenes/portada.jpg');
     </div>
 </section>
 
-<!-- ===================== HORARIO Y UBICACIÓN ===================== -->
 <section class="banner-horario">
     <div class="contenedor banner-horario__interior">
         <div class="banner-horario__bloque">

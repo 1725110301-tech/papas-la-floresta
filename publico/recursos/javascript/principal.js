@@ -1,15 +1,9 @@
-/* =====================================================================
-   Papas a la Francesa La Floresta - JavaScript del sitio público
-   ===================================================================== */
+
 (function () {
     'use strict';
 
     var reducirMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
-
-    /* ---------------------------------------------------------------
-       1. Sombra amarilla en el encabezado al bajar
-       --------------------------------------------------------------- */
     var encabezado = document.querySelector('.encabezado');
 
     function alDesplazar() {
@@ -20,9 +14,6 @@
     window.addEventListener('scroll', alDesplazar, { passive: true });
     alDesplazar();
 
-    /* ---------------------------------------------------------------
-       2. Las secciones aparecen suavemente al llegar a ellas
-       --------------------------------------------------------------- */
     var revelables = document.querySelectorAll('.revelar');
 
     if ('IntersectionObserver' in window && !reducirMovimiento) {
@@ -39,11 +30,6 @@
     } else {
         revelables.forEach(function (el) { el.classList.add('visible'); });
     }
-
-    /* ---------------------------------------------------------------
-       3. Letrero "Abierto ahora / Cerrado" según los horarios
-          (los horarios vienen de ajustes.php)
-       --------------------------------------------------------------- */
     function aMinutos(hora) {
         var partes = hora.split(':');
         return parseInt(partes[0], 10) * 60 + parseInt(partes[1], 10);
@@ -64,7 +50,6 @@
         var min = ahora.getHours() * 60 + ahora.getMinutes();
         var i, g, abre, cierra, cruzaMedianoche;
 
-        // ¿Está abierto ahora?
         for (i = 0; i < horarios.length; i++) {
             g = horarios[i];
             abre = aMinutos(g.abre);
@@ -75,13 +60,11 @@
                 if (!cruzaMedianoche && min >= abre && min < cierra) { return { abierto: true, cierra: g.cierra }; }
                 if (cruzaMedianoche && min >= abre) { return { abierto: true, cierra: g.cierra }; }
             }
-            // Horario de ayer que se extiende después de medianoche
+
             if (cruzaMedianoche && g.dias.indexOf(ayer) !== -1 && min < cierra) {
                 return { abierto: true, cierra: g.cierra };
             }
         }
-
-        // Cerrado: buscar la próxima apertura (hoy o en los siguientes 7 días)
         for (var desfase = 0; desfase < 8; desfase++) {
             var diaBuscado = (dia + desfase) % 7;
             var mejor = null;
@@ -114,17 +97,14 @@
         } else {
             letrero.setAttribute('data-estado', 'cerrado');
             var cuando = estado.desfase === 0 ? 'hoy'
-                       : estado.desfase === 1 ? 'mañana'
-                       : 'el ' + DIAS[estado.dia];
+                : estado.desfase === 1 ? 'mañana'
+                    : 'el ' + DIAS[estado.dia];
             letreroTexto.textContent = 'Cerrado ahora · Abrimos ' + cuando + ' a las ' + formato12(estado.abre);
         }
     }
     actualizarLetrero();
     setInterval(actualizarLetrero, 60000);
 
-    /* ---------------------------------------------------------------
-       4. Sorpresa: lluvia de papas al tocar el sticker
-       --------------------------------------------------------------- */
     var botonLluvia = document.getElementById('lluvia-papas');
 
     if (botonLluvia) {

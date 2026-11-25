@@ -1,8 +1,6 @@
 <?php
-/**
- * Controlador de productos: pide los datos al modelo y los deja listos
- * para que la vista solo tenga que mostrarlos.
- */
+
+ 
 class ControladorProductos
 {
     private ModeloProductos $modelo;
@@ -24,6 +22,17 @@ class ControladorProductos
             // Si las tablas aún no existen, la portada igual carga.
             error_log('Error al leer productos: ' . $e->getMessage());
             return ['destacados' => [], 'precioDesde' => null];
+        }
+    }
+
+    /** Datos que necesita la página de menú. */
+    public function datosMenu(): array
+    {
+        try {
+            return ['productos' => $this->modelo->obtenerTodos()];
+        } catch (PDOException $e) {
+            error_log('Error al leer el menú: ' . $e->getMessage());
+            return ['productos' => []];
         }
     }
 }

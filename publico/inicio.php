@@ -1,9 +1,5 @@
 <?php
-/**
- * Punto de entrada del sitio público.
- *   inicio.php                -> portada
- *   inicio.php?pagina=menu    -> menú, etc. (ver rutas/rutas.php)
- */
+
 
 require_once __DIR__ . '/../aplicacion/configuracion/conexion.php';
 require_once __DIR__ . '/../aplicacion/funciones/funciones.php';
@@ -22,8 +18,9 @@ $tituloPagina = $paginaActual === 'inicio'
 
 // Datos que necesita cada página (la vista solo los muestra)
 $datos = [];
-if ($paginaActual === 'inicio') {
-    $datos = (new ControladorProductos(obtenerConexion()))->datosInicio();
+if ($paginaActual === 'inicio' || $paginaActual === 'menu') {
+    $controlador = new ControladorProductos(obtenerConexion());
+    $datos = $paginaActual === 'inicio' ? $controlador->datosInicio() : $controlador->datosMenu();
 }
 
 require RUTA_RAIZ . '/vistas/componentes/encabezado.php';

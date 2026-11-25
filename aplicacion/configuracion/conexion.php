@@ -1,8 +1,5 @@
 <?php
-/**
- * Conexión a MySQL mediante PDO.
- * Uso:  $bd = obtenerConexion();
- */
+ 
 
 require_once __DIR__ . '/ajustes.php';
 

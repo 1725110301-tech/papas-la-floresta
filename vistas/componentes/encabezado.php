@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,27 +15,31 @@
 
     <link rel="stylesheet" href="recursos/estilos/principal.css">
     <link rel="stylesheet" href="recursos/estilos/adaptable.css">
+    <link rel="stylesheet" href="recursos/estilos/paginas.css">
 
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
 </head>
+
 <body class="pagina-<?= e($paginaActual) ?>">
-<a class="saltar" href="#contenido">Saltar al contenido</a>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-<header class="encabezado">
-    <div class="contenedor encabezado__interior">
-        <a class="logo" href="<?= e(urlPagina('inicio')) ?>" aria-label="<?= e(NOMBRE_NEGOCIO) ?> - Inicio">
-            <span class="logo__nombre">La Floresta</span>
-            <span class="logo__lema">Papas a la Francesa • Tulancingo, Hgo.</span>
-        </a>
+    <header class="encabezado">
+        <div class="contenedor encabezado__interior">
+            <a class="logo" href="<?= e(urlPagina('inicio')) ?>" aria-label="<?= e(NOMBRE_NEGOCIO) ?> - Inicio">
+                <span class="logo__nombre">La Floresta</span>
+                <span class="logo__lema">Papas a la Francesa • Tulancingo, Hgo.</span>
+            </a>
 
-        <?php require __DIR__ . '/navegacion.php'; ?>
+            <?php require __DIR__ . '/navegacion.php'; ?>
 
-        <a class="boton boton--rojo boton--chico" href="<?= e(enlaceWhatsapp('Hola, quiero hacer un pedido 🍟')) ?>" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined" aria-hidden="true">chat</span>
-            <span class="solo-movil">Pedir</span>
-            <span class="solo-escritorio">Pedir por WhatsApp</span>
-        </a>
-    </div>
-</header>
+            <a class="boton boton--rojo boton--chico" href="<?= e(enlaceWhatsapp('Hola, quiero hacer un pedido 🍟')) ?>" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                <span class="solo-movil">Pedir</span>
+                <span class="solo-escritorio">Pedir por WhatsApp</span>
+            </a>
+        </div>
+    </header>
 
-<main id="contenido">
+    <main id="contenido">

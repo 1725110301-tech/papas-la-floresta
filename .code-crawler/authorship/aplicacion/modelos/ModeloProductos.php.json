@@ -1,0 +1,102 @@
+{
+  "filePath": "aplicacion\\modelos\\ModeloProductos.php",
+  "lines": [
+    {
+      "line": 1,
+      "author": "human",
+      "confidence": 0.7,
+      "aiEdits": 0,
+      "humanEdits": 1,
+      "lastEditType": "human",
+      "lastEditTimestamp": 1795578199899,
+      "signals": {
+        "typingRhythm": 0.5,
+        "editSize": 0.15000000000000002,
+        "cursorMovement": 0.5,
+        "editSequence": 0.5,
+        "undoFrequency": 0.5,
+        "extensionSource": 0.5,
+        "velocityProfile": 0.5,
+        "selectionPattern": 0.5,
+        "pastePattern": 0.5,
+        "deletionPattern": 0.5,
+        "pausePattern": 0.5
+      }
+    },
+    {
+      "line": 11,
+      "author": "human",
+      "confidence": 0.7,
+      "aiEdits": 0,
+      "humanEdits": 1,
+      "lastEditType": "human",
+      "lastEditTimestamp": 1795578202360,
+      "signals": {
+        "typingRhythm": 0.5,
+        "editSize": 0.15000000000000002,
+        "cursorMovement": 0.5,
+        "editSequence": 0.5,
+        "undoFrequency": 0.5,
+        "extensionSource": 0.5,
+        "velocityProfile": 0.5,
+        "selectionPattern": 0.5,
+        "pastePattern": 0.5,
+        "deletionPattern": 0.5,
+        "pausePattern": 0.5
+      }
+    },
+    {
+      "line": 24,
+      "author": "human",
+      "confidence": 0.7,
+      "aiEdits": 0,
+      "humanEdits": 1,
+      "lastEditType": "human",
+      "lastEditTimestamp": 1795578205176,
+      "signals": {
+        "typingRhythm": 0.5,
+        "editSize": 0.15000000000000002,
+        "cursorMovement": 0.5,
+        "editSequence": 0.5,
+        "undoFrequency": 0.5,
+        "extensionSource": 0.5,
+        "velocityProfile": 0.5,
+        "selectionPattern": 0.5,
+        "pastePattern": 0.5,
+        "deletionPattern": 0.5,
+        "pausePattern": 0.5
+      }
+    },
+    {
+      "line": 33,
+      "author": "human",
+      "confidence": 0.7,
+      "aiEdits": 0,
+      "humanEdits": 1,
+      "lastEditType": "human",
+      "lastEditTimestamp": 1795578207374,
+      "signals": {
+        "typingRhythm": 0.5,
+        "editSize": 0.15000000000000002,
+        "cursorMovement": 0.5,
+        "editSequence": 0.5,
+        "undoFrequency": 0.5,
+        "extensionSource": 0.5,
+        "velocityProfile": 0.5,
+        "selectionPattern": 0.5,
+        "pastePattern": 0.5,
+        "deletionPattern": 0.5,
+        "pausePattern": 0.5
+      }
+    }
+  ],
+  "summary": {
+    "totalLines": 4,
+    "aiLines": 0,
+    "humanLines": 4,
+    "mixedLines": 0,
+    "aiPercentage": 0,
+    "humanPercentage": 100
+  },
+  "lastUpdated": 1795578208397
+}

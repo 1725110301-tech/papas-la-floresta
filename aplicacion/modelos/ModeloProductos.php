@@ -1,8 +1,5 @@
 <?php
-/**
- * Modelo de productos: todo el acceso a la tabla `productos`.
- * Solo consultas preparadas; aquí no hay HTML.
- */
+
 class ModeloProductos
 {
     private PDO $bd;
@@ -12,7 +9,7 @@ class ModeloProductos
         $this->bd = $bd;
     }
 
-    /** Productos para la portada (primero los disponibles). */
+
     public function obtenerDestacados(int $limite = 3): array
     {
         $consulta = $this->bd->prepare(
@@ -26,7 +23,6 @@ class ModeloProductos
         return $consulta->fetchAll();
     }
 
-    /** Todos los productos (lo usará la página de menú). */
     public function obtenerTodos(): array
     {
         return $this->bd->query(
@@ -36,7 +32,6 @@ class ModeloProductos
         )->fetchAll();
     }
 
-    /** Precio más bajo entre los productos disponibles (null si no hay). */
     public function obtenerPrecioMinimo(): ?float
     {
         $valor = $this->bd->query('SELECT MIN(precio) FROM productos WHERE disponible = 1')->fetchColumn();

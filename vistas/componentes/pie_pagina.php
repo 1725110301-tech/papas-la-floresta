@@ -1,5 +1,5 @@
 <?php
-$logoPie = archivoPublicoExiste('recursos/imagenes/logotipo.png') ? 'recursos/imagenes/logotipo.png' : null;
+$logoPie = archivoPublicoExiste('recursos/imagenes/logo.png') ? 'recursos/imagenes/logo.png' : null;
 
 $redesSociales = [
     'Facebook'  => entorno('FACEBOOK_URL')  ?: 'https://www.facebook.com/share/1FnCUZP9RA/',
